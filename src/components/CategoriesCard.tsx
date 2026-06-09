@@ -22,7 +22,7 @@ export default function CategoriesGrid() {
                 {visibleCategories.map((category) => {
                     const gridClass = gridStylesMap[category.id] || 'col-span-1 row-span-1'
                     return (
-                        <div
+                        <a href='/'
                             key={category.id}
                             className={`${gridClass} relative bg-[#D9D9D9] rounded-[32px] p-6 overflow-hidden flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all duration-300`}
                         >
@@ -42,7 +42,7 @@ export default function CategoriesGrid() {
                                     />
                                 </div>
                             )}
-                        </div>
+                        </a>
                     )
                 })}
             </div>

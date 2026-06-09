@@ -4,10 +4,10 @@ export default function Header() {
             <div className="max-w-[1440px] w-full flex justify-center items-center">
 
                 <nav className="flex gap-6 w-full items-center">
-                    
-                    <div className="w-[140px] h-[44px] bg-gray-200 flex items-center justify-center rounded text-sm font-bold">
-                        Лого
-                    </div>
+
+                    <a href='/' className="w-[140px] h-[44px] flex items-center justify-center rounded text-sm font-bold">
+                        <img src="/icons/logo.svg" alt="" />
+                    </a>
 
                     <a href="/" className="bg-black rounded-xl gap-4 p-2 w-40 h-11 text-white flex justify-center items-center flex-shrink-0">
                         <img src="/icons/shopping-catalog.svg" alt='catalog' />
@@ -16,23 +16,23 @@ export default function Header() {
 
 
                     <form className="flex-grow flex items-center h-11 border border-black rounded-xl overflow-hidden relative ">
-                        
+
                         <div className="pl-4 pr-2 flex items-center pointer-events-none ">
-                            <img src='/icons/magnifying_glass.svg' alt="searchIcon" className="w-5 h-5 text-gray-500"/>
+                            <img src='/icons/magnifying_glass.svg' alt="searchIcon" className="w-5 h-5 text-gray-500" />
                         </div>
-                        
-                        <input 
-                            type="text" 
-                            placeholder="Пошук" 
+
+                        <input
+                            type="text"
+                            placeholder="Пошук"
                             className="w-full h-full bg-transparent outline-none text-base text-black placeholder-gray-400"
                         />
-                        
-                        <button 
-                            type="submit" 
+
+                        <button
+                            type="submit"
                             className="bg-black h-full px-8 text-white text-base font-medium hover:bg-neutral-800 transition-colors flex-shrink-0">
                             Знайти
                         </button>
-                        
+
                     </form>
 
                     <a href="/" className="bg-black rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0">

@@ -1,6 +1,12 @@
+'use client'
+import { useState } from 'react'
+import CatalogMenu from './Catalog';
+
 export default function Header() {
+    const [catalogOpen, setCatalogOpen] = useState(false);
+
     return (
-        <header className="bg-white shadow px-8 py-4 flex justify-center items-center w-full">
+        <header className="bg-white shadow px-8 py-4 flex justify-center items-center w-full relative">
             <div className="max-w-[1440px] w-full flex justify-center items-center">
 
                 <nav className="flex gap-6 w-full items-center">
@@ -9,11 +15,20 @@ export default function Header() {
                         <img src="/icons/logo.svg" alt="" />
                     </a>
 
-                    <a href="/" className="bg-[#8C9DAD] rounded-xl gap-4 p-2 w-40 h-11 text-white flex justify-center items-center flex-shrink-0">
-                        <img src="/icons/shopping-catalog.svg" alt='catalog' />
-                        <p>Каталог</p>
-                    </a>
-
+                    <button
+                        onClick={() => setCatalogOpen(!catalogOpen)}
+                        className={`
+                            rounded-xl gap-4 p-2 w-40 h-11 text-white flex justify-center items-center flex-shrink-0
+                            transition-all duration-200 ease-in-out cursor-pointer select-none
+                            hover:bg-[#768798] active:scale-95 active:shadow-inner
+                            ${catalogOpen ? 'bg-[#5F6E7B]' : 'bg-[#8C9DAD]'}
+                        `}>
+                        <img
+                            src="/icons/shopping-catalog.svg"
+                            alt='catalog'
+                        />
+                        <p className="font-medium text-sm">Каталог</p>
+                    </button>
 
                     <form className="flex-grow flex items-center h-11 border-2 border-[#8C9DAD] rounded-xl overflow-hidden relative ">
 
@@ -54,6 +69,12 @@ export default function Header() {
 
                 </nav>
             </div>
+
+            {catalogOpen && (
+                <div className="absolute top-full left-0 w-full z-50">
+                    <CatalogMenu />
+                </div>
+            )}
         </header>
     );
 }

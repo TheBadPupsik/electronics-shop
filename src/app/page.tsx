@@ -2,6 +2,7 @@ import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 import CategoriesGrid from "@/components/CategoriesCard";
+import BannerSlider from "@/components/SliderSigma";
 
 const promoCards = [
   { id: 1, title: "Акція 1", daysLeft: 5, image: "/promo1.jpg" },
@@ -14,6 +15,8 @@ export default function Home() {
     <div>
 
       <CategoriesGrid></CategoriesGrid>
+
+      <BannerSlider></BannerSlider>
 
       <div className="max-w-[1440px] w-full mx-auto mt-10">
         <div className="flex items-center gap-3">

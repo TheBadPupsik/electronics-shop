@@ -36,7 +36,7 @@ export default function Home() {
           <p className="text-neutral-900 text-base font-medium leading-relaxed max-w-[280px]">
             Хітові товари за зниженими цінами. Перегляньте топ пропозиції, поки вони не зникли.
           </p>
-          <button className="bg-black hover:bg-neutral-800 text-white font-bold text-sm rounded-full py-3.5 px-6 w-fit transition-colors duration-200">
+          <button className="bg-[#8C9DAD] hover:bg-[#6f7c88] text-white font-bold text-sm rounded-full py-3.5 px-6 w-fit transition-colors duration-200">
             Дивитися всі
           </button>
         </div>
@@ -57,7 +57,7 @@ export default function Home() {
                 )}
               </div>
 
-              <div className="mt-4 bg-[#e9e9e9] text-neutral-600 text-xs font-semibold px-4 py-1.5 rounded-full w-fit">
+              <div className="mt-4 bg-[#8C9DAD] text-black text-xs font-semibold px-4 py-1.5 rounded-full w-fit">
                 Залишилося {card.daysLeft} днів
               </div>
 

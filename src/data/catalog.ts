@@ -5,12 +5,12 @@ export type Category = {
 };
 
 export const categories: Category[] = [
-    { id: 1, name: 'Смартфони та телефони', image: '/categories/phones.jpg' },
-    { id: 2, name: 'Техніка для кухні', image: '/categories/kitchen.jpg' },
-    { id: 3, name: 'Техніка для дому', image: '/categories/home.jpg' },
-    { id: 4, name: 'Телевізори та мультимедіа', image: '/categories/tv.jpg' },
-    { id: 5, name: 'Ігрові консолі та геймінг', image: '/categories/gaming.jpg' },
-    { id: 6, name: "Ноутбуки, планшети та комп'ютерна техніка", image: '/categories/laptops.jpg' },
-    { id: 7, name: 'Смарт-годинники та гаджети', image: '/categories/smartwatch.jpg' },
-    { id: 8, name: 'Аудіо, фото та відео', image: '/categories/audio.jpg' },
+    { id: 1, name: 'Смартфони та телефони', image: '/images/phones.png' },
+    { id: 2, name: 'Техніка для кухні', image: '/images/fridge.png' },
+    { id: 3, name: 'Техніка для дому', image: '/images/stiralka.png' },
+    { id: 4, name: 'Телевізори та мультимедіа', image: '/images/tv.png' },
+    { id: 5, name: 'Ігрові консолі та геймінг', image: '/images/ps5.webp' },
+    { id: 6, name: "Ноутбуки, планшети та комп'ютерна техніка", image: '/images/laptops.png' },
+    { id: 7, name: 'Смарт-годинники та гаджети', image: '/images/watch1.png' },
+    { id: 8, name: 'Аудіо, фото та відео', image: '/images/camera.png' },
 ];

@@ -40,7 +40,7 @@ export default function ProductCard({ name, price, image, describe, discount }: 
             </div>
 
             <div className="mt-3 px-1 flex-grow">
-                <h2 className="font-bold text-base text-neutral-800 line-clamp-2 leading-tight min-h-[2.5rem]">{name}</h2>
+                <h2 className="font-bold text-base text-[#8C9DAD] line-clamp-2 leading-tight min-h-[2.5rem]">{name}</h2>
                 <p className="text-gray-400 text-xs mt-1 line-clamp-2">{describe}</p>
             </div>
 

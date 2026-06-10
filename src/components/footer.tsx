@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer className="bg-gray-100 text-center py-6 mt-5 text-gray-500">
             <div className="max-w-[1440px] bg-[#D9D9D9] w-full p-6 flex justify-center items-center gap-4 mx-auto">
-                
+
                 <img src='' alt='' className="w-12 h-12 bg-gray-300" />
 
                 <div className="flex flex-col text-left">
@@ -121,16 +121,16 @@ export default function Footer() {
                             <img src="/icons/instagram.svg" alt="Instagram" className="w-6 h-6" />
                         </a>
                         <a href="#" className="hover:opacity-70 transition">
-                            <img src="/icons/facebook.svg" alt="Facebook" className="w-6 h-6" />
+                            <img src="/icons/facebook F.svg" alt="Facebook" className="w-6 h-6" />
                         </a>
                         <a href="#" className="hover:opacity-70 transition">
                             <img src="/icons/youtube.svg" alt="YouTube" className="w-6 h-6" />
                         </a>
                         <a href="#" className="hover:opacity-70 transition">
-                            <img src="/icons/telegram.svg" alt="Telegram" className="w-6 h-6" />
+                            <img src="/icons/Telegram App.svg" alt="Telegram App" className="w-6 h-6" />
                         </a>
                         <a href="#" className="hover:opacity-70 transition">
-                            <img src="/icons/viber.svg" alt="Viber" className="w-6 h-6" />
+                            <img src="/icons/Ringer Volume.svg" alt="Viber" className="w-6 h-6" />
                         </a>
                     </div>
                 </div>

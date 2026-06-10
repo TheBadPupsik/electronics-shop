@@ -24,20 +24,20 @@ export default function CategoriesGrid() {
                     return (
                         <a href='/'
                             key={category.id}
-                            className={`${gridClass} relative bg-[#D9D9D9] rounded-[32px] p-6 overflow-hidden flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all duration-300`}
+                            className={`${gridClass} relative bg-[#F3EDE7] rounded-[32px] p-6 overflow-hidden flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all duration-300`}
                         >
-                            <h3 className="relative z-10 text-[18px] font-bold text-neutral-800 max-w-[160px] leading-tight">
+                            <h3 className="relative z-10 text-[16px] text-[#8C9DAD] font-bold max-w-[140px] leading-tight">
                                 {category.name}
                             </h3>
 
                             {category.image && (
-                                <div className="absolute inset-0 z-0 opacity-40 group-hover:scale-105 transition-transform duration-500 ease-out">
+                                <div className="absolute bottom-0 right-0 w-3/5 h-full z-0">
                                     <Image
                                         src={category.image}
                                         alt={category.name}
                                         fill
-                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 30vw, 20vw"
-                                        className="object-cover"
+                                        sizes="300px"
+                                        className="object-contain object-right-bottom group-hover:scale-105 transition-transform duration-500"
                                         priority={category.id === 1 || category.id === 2}
                                     />
                                 </div>

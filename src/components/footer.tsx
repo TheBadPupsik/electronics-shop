@@ -1,9 +1,9 @@
 export default function Footer() {
     return (
         <footer className="bg-gray-100 text-center py-6 mt-5 text-gray-500">
-            <div className="max-w-[1440px] bg-[#D9D9D9] w-full p-6 flex justify-center items-center gap-4 mx-auto">
+            <div className="max-w-[1440px] bg-[#FFB800] w-full p-6 flex justify-center items-center gap-4 mx-auto">
 
-                <img src='' alt='' className="w-12 h-12 bg-gray-300" />
+                <img src='/images/QR_code_for_mobile_English_Wikipedia.svg' alt='qr_code' className="w-55 h-55 bg-white" />
 
                 <div className="flex flex-col text-left">
                     <h2 className="text-4xl font-bold text-gray-800">Скануй QR code та встановлюй додаток</h2>
@@ -53,7 +53,7 @@ export default function Footer() {
 
                 <div className="flex flex-row justify-between items-start gap-8">
 
-                    <div className="bg-[#8a9bb5] rounded-2xl p-6 w-80 flex flex-col gap-3">
+                    <div className="bg-[#FFB800] rounded-2xl p-6 w-80 flex flex-col gap-3">
                         <div>
                             <p className="text-white font-bold text-lg">Підписуйтесь на знижки!</p>
                             <p className="text-white/70 text-sm">Не турбуйтесь, ми не спамимо</p>
@@ -85,17 +85,17 @@ export default function Footer() {
                     <div className="flex flex-col gap-2">
                         <p className="font-bold text-base mb-1">Консультація</p>
                         <div className="flex items-center gap-2">
-                            <span>📞</span>
+                            <img src='/icons/line-md_phone-filled.svg' alt='phone'/>
                             <span className="font-bold text-2xl">0-800-303-505</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span>📞</span>
+                            <img src='/icons/line-md_phone-filled.svg' alt='phone'/>
                             <span className="font-bold text-2xl">0-800-600-506</span>
                         </div>
                         <p className="text-gray-400 text-sm">Безкоштовно по Україні</p>
                         <p className="text-gray-400 text-sm">08:00 - 21:00 Пн-Нд</p>
                         <div className="flex items-center gap-2 mt-1">
-                            <span>✉️</span>
+                            <img src='/icons/Email.svg' alt='email' />
                             <a href="mailto:info@cursor.ua" className="text-gray-400 text-sm hover:text-black transition">info@cursor.ua</a>
                         </div>
                         <div className="flex flex-col gap-1 mt-2">

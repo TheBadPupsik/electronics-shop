@@ -1,36 +1,91 @@
 'use client'
+
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { useEffect, useState, useCallback } from 'react'
+import Image from 'next/image'
 
 const banners = [
-    { id: 1, bg: 'bg-black' },
-    { id: 2, bg: 'bg-pink-500' },
-    { id: 3, bg: 'bg-yellow-400' },
-    { id: 4, bg: 'bg-red-500' },
-    { id: 5, bg: 'bg-blue-500' },
-    { id: 6, bg: 'bg-black' },
-    { id: 7, bg: 'bg-pink-500' },
-    { id: 8, bg: 'bg-yellow-400' },
-    { id: 9, bg: 'bg-red-500' },
-    { id: 10, bg: 'bg-blue-500' },
+    { id: 1, bg: '/images/PlayStation.png' },
+    { id: 2, bg: '/images/Samsung TV.png' },
+    { id: 3, bg: '/images/Phone.png' },
+    { id: 4, bg: '/images/Кондиціонери.png' },
+    { id: 5, bg: '/images/Рассрочка.png' },
+    { id: 6, bg: '/images/товаридня.png' },
 ]
 
 export default function BannerSlider() {
-    const [emblaRef] = useEmblaCarousel(
-        { loop: true, align: 'center', dragFree: true },
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        { loop: true, align: 'center' },
         [Autoplay({ delay: 3000, stopOnInteraction: false })]
     )
+    const [current, setCurrent] = useState(0)
+
+    const onSelect = useCallback((api) => {
+        setCurrent(api.selectedScrollSnap())
+    }, [])
+
+    useEffect(() => {
+        if (!emblaApi) return
+
+        onSelect(emblaApi)
+        emblaApi.on('reInit', onSelect)
+        emblaApi.on('select', onSelect)
+    }, [emblaApi, onSelect])
 
     return (
-        <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
-            <div className="flex gap-4 px-8">
-                {banners.map(banner => (
-                    <div
-                        key={banner.id}
-                        className={`${banner.bg} flex-shrink-0 w-[400px] h-[500px] rounded-2xl transition-all duration-700 ease-in-out`}
-                    />
-                ))}
+        <div className="flex flex-col items-center gap-6 w-full mt-10">
+
+            <div className="overflow-hidden cursor-grab active:cursor-grabbing w-full px-4" ref={emblaRef}>
+                <div className="flex">
+                    {banners.map((banner, index) => {
+                        const isActive = index === current;
+
+                        return (
+                            <div
+                                key={`${banner.id}-${index}`}
+                                className="flex-shrink-0 w-[440px] px-3 transition-all duration-500 ease-out"
+                            >
+                                <div
+                                    className={`relative h-[500px] w-full rounded-3xl overflow-hidden transition-all duration-500 ease-out shadow-sm
+                                        ${isActive
+                                            ? 'scale-100 opacity-100 shadow-md'
+                                            : 'scale-92 opacity-60'
+                                        }`}
+                                >
+                                    <Image
+                                        src={banner.bg}
+                                        alt="Promo Banner"
+                                        fill
+                                        sizes="440px"
+                                        className="object-cover pointer-events-none select-none"
+                                        priority={index === 0}
+                                    />
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
+
+            <div className="flex gap-2.5 items-center mt-2">
+                {banners.map((_, index) => {
+                    const isActive = index === current;
+
+                    return (
+                        <button
+                            key={index}
+                            onClick={() => emblaApi?.scrollTo(index)}
+                            className={`h-2 rounded-full transition-all duration-300 ease-in-out cursor-pointer
+                                ${isActive
+                                    ? 'bg-black w-7'
+                                    : 'bg-neutral-300 w-2 hover:bg-neutral-400'
+                                }`}
+                        />
+                    );
+                })}
+            </div>
+
         </div>
     )
 }

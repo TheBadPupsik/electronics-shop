@@ -5,9 +5,9 @@ import CategoriesGrid from "@/components/CategoriesCard";
 import BannerSlider from "@/components/SliderSigma";
 
 const promoCards = [
-  { id: 1, title: "Акція 1", daysLeft: 5, image: "/promo1.jpg" },
-  { id: 2, title: "Акція 2", daysLeft: 3, image: "/promo2.jpg" },
-  { id: 3, title: "Акція 3", daysLeft: 7, image: "/promo3.jpg" },
+  { id: 1, title: "Здай стару техніку та отримай до 5000 грн виходи", daysLeft: 5, image: "/images/обміняй старе на нове.png" },
+  { id: 2, title: "Обирай будь-які товари зі спеціальною позначкою", daysLeft: 3, image: "/images/другий товар дешевше.png" },
+  { id: 3, title: "Ноутбики, планшети та телефони Apple", daysLeft: 7, image: "/images/тиждень apple.png" },
 ];
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
           <p className="text-neutral-900 text-base font-medium leading-relaxed max-w-[280px]">
             Хітові товари за зниженими цінами. Перегляньте топ пропозиції, поки вони не зникли.
           </p>
-          <button className="bg-[#8C9DAD] hover:bg-[#6f7c88] text-white font-bold text-sm rounded-full py-3.5 px-6 w-fit transition-colors duration-200">
+          <button className="bg-[#FFB800] hover:bg-[#e6a602] text-white font-bold text-sm rounded-full py-3.5 px-6 w-fit transition-colors duration-200 cursor-pointer">
             Дивитися всі
           </button>
         </div>
@@ -48,7 +48,7 @@ export default function Home() {
           {promoCards.map((card) => (
             <article key={card.id} className="flex flex-col w-full group cursor-pointer">
 
-              <div className="relative w-full h-[240px] bg-[#d9d9d9] rounded-[32px] overflow-hidden transition-shadow duration-300 group-hover:shadow-md">
+              <div className="relative w-full h-[180px] bg-[#d9d9d9] rounded-[32px] overflow-hidden transition-shadow duration-300 group-hover:shadow-md">
                 {card.image && (
                   <Image
                     src={card.image}
@@ -60,11 +60,11 @@ export default function Home() {
                 )}
               </div>
 
-              <div className="mt-4 bg-[#8C9DAD] text-black text-xs font-semibold px-4 py-1.5 rounded-full w-fit">
+              <div className="mt-4 bg-[#FFB800] text-black text-base font-semibold p-2.5   py-1.5 rounded-full w-fit">
                 Залишилося {card.daysLeft} днів
               </div>
 
-              <h3 className="mt-3 text-lg font-bold text-black px-1 capitalize">
+              <h3 className="mt-3 text-sm font-bold text-black px-1 capitalize">
                 {card.title}
               </h3>
 

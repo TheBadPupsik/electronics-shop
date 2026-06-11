@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { categories, Category } from '@/data/catalog'
+import Link from 'next/link'
 
 const gridStylesMap: Record<number, string> = {
     1: 'col-start-1 row-start-1 col-span-1 row-span-1',
@@ -22,11 +23,11 @@ export default function CategoriesGrid() {
                 {visibleCategories.map((category) => {
                     const gridClass = gridStylesMap[category.id] || 'col-span-1 row-span-1'
                     return (
-                        <a href='/'
+                        <Link href={category.href}
                             key={category.id}
-                            className={`${gridClass} relative bg-[#F3EDE7] rounded-[32px] p-6 overflow-hidden flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all duration-300`}
+                            className={`${gridClass} relative bg-[#FFF7ED] rounded-[32px] p-6 overflow-hidden flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all duration-300`}
                         >
-                            <h3 className="relative z-10 text-[16px] text-[#8C9DAD] font-bold max-w-[140px] leading-tight">
+                            <h3 className="relative z-10 text-[16px] text-black font-bold max-w-[140px] leading-tight">
                                 {category.name}
                             </h3>
 
@@ -42,7 +43,7 @@ export default function CategoriesGrid() {
                                     />
                                 </div>
                             )}
-                        </a>
+                        </Link>
                     )
                 })}
             </div>

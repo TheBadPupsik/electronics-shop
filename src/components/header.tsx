@@ -20,8 +20,8 @@ export default function Header() {
                         className={`
                             rounded-xl gap-4 p-2 w-40 h-11 text-white flex justify-center items-center flex-shrink-0
                             transition-all duration-200 ease-in-out cursor-pointer select-none
-                            hover:bg-[#768798] active:scale-95 active:shadow-inner
-                            ${catalogOpen ? 'bg-[#5F6E7B]' : 'bg-[#8C9DAD]'}
+                            hover:bg-[#FFB800] active:scale-95 active:shadow-inner
+                            ${catalogOpen ? 'bg-[#e6a602]' : 'bg-[#FFB800]'}
                         `}>
                         <img
                             src="/icons/shopping-catalog.svg"
@@ -30,7 +30,7 @@ export default function Header() {
                         <p className="font-medium text-sm">Каталог</p>
                     </button>
 
-                    <form className="flex-grow flex items-center h-11 border-2 border-[#8C9DAD] rounded-xl overflow-hidden relative ">
+                    <form className="flex-grow flex items-center h-11 border-2 border-[#FFB800] rounded-xl overflow-hidden relative ">
 
                         <div className="pl-4 pr-2 flex items-center pointer-events-none ">
                             <img src='/icons/magnifying_glass.svg' alt="searchIcon" className="w-5 h-5 text-gray-500" />
@@ -44,25 +44,25 @@ export default function Header() {
 
                         <button
                             type="submit"
-                            className="bg-[#8C9DAD] h-full px-8 text-white text-base font-medium hover:bg-[#6f7c88] transition-colors flex-shrink-0">
+                            className="bg-[#FFB800] h-full px-8 text-white text-base font-medium hover:bg-[#e6a602] transition-colors flex-shrink-0">
                             Знайти
                         </button>
 
                     </form>
 
-                    <a href="/" className="bg-[#8C9DAD] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0">
+                    <a href="/" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0">
                         <img src="/icons/mdi_heart.svg" alt='wish' />
                     </a>
 
-                    <a href="/" className="bg-[#8C9DAD] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0">
+                    <a href="/" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0">
                         <img src="/icons/material-symbols_balance.svg" alt='balance' />
                     </a>
 
-                    <a href="/" className="bg-[#8C9DAD] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0">
+                    <a href="/" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0">
                         <img src="/icons/iconamoon_profile-fill.svg" alt='profileIcon' />
                     </a>
 
-                    <a href="/" className="bg-[#8C9DAD] rounded-xl gap-4 p-2 w-36 h-11 text-white flex justify-center items-center flex-shrink-0">
+                    <a href="/" className="bg-[#FFB800] rounded-xl gap-4 p-2 w-36 h-11 text-white flex justify-center items-center flex-shrink-0">
                         <img src="/icons/mdi_cart.svg" alt='cartIcon' />
                         <p>Кошик</p>
                     </a>

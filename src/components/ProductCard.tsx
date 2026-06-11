@@ -14,13 +14,13 @@ export default function ProductCard({ name, price, image, describe, discount }: 
                     className="object-cover z-0"
                 />
 
-                <span className="absolute top-2 left-2 z-10 bg-gray-500/70 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                <span className="absolute top-2 left-2 z-10 bg-[#e3a505] text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                     -{discount}%
                 </span>
 
                 <div className="absolute top-2 right-2 flex flex-col gap-2 z-10">
 
-                    <button className="backdrop-blur-md bg-gray-500/70 rounded-full w-9 h-9 flex items-center justify-center shadow-sm transition-all duration-200 group/btn">
+                    <button className="backdrop-blur-md bg-[#e3a505] rounded-full w-9 h-9 flex items-center justify-center shadow-sm transition-all duration-200 group/btn">
                         <img
                             src="/icons/mdi_heart.svg"
                             alt="wish"
@@ -28,7 +28,7 @@ export default function ProductCard({ name, price, image, describe, discount }: 
                         />
                     </button>
 
-                    <button className="backdrop-blur-md bg-gray-500/70 rounded-full w-9 h-9 flex items-center justify-center shadow-sm transition-all duration-200 group/btn">
+                    <button className="backdrop-blur-md bg-[#e3a505] rounded-full w-9 h-9 flex items-center justify-center shadow-sm transition-all duration-200 group/btn">
                         <img
                             src="/icons/material-symbols_balance.svg"
                             alt="balance"

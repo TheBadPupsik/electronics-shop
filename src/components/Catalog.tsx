@@ -48,7 +48,6 @@ export default function CatalogMenu() {
         <div className="bg-white shadow-xl border-t border-neutral-100 px-8 py-8 w-full">
             <div className="max-w-[1440px] w-full mx-auto grid grid-cols-4 gap-8">
 
-                {/* КОЛОНКА 1: Основные категории */}
                 <div className="flex flex-col gap-1 border-r border-neutral-100 pr-4">
                     {catalogChoise.map((item) => (
                         <Link
@@ -68,7 +67,6 @@ export default function CatalogMenu() {
                     ))}
                 </div>
 
-                {/* КОЛОНКИ 2, 3, 4: Подкатегории (рендерятся автоматически из объекта) */}
                 {Object.values(subCategories).map((column, colIndex) => (
                     <div key={colIndex} className="flex flex-col gap-3">
                         {column.map((sub, itemIndex) => (
@@ -76,8 +74,8 @@ export default function CatalogMenu() {
                                 key={itemIndex}
                                 href={sub.href}
                                 className={`font-futura transition-colors duration-150 block leading-tight ${sub.isHeader
-                                        ? "text-black font-bold text-[16px] hover:text-neutral-600 mt-2 first:mt-0"
-                                        : "text-neutral-400 font-medium text-[13px] hover:text-black pl-1"
+                                    ? "text-black font-bold text-[16px] hover:text-neutral-600 mt-2 first:mt-0"
+                                    : "text-neutral-400 font-medium text-[13px] hover:text-black pl-1"
                                     }`}
                             >
                                 {sub.title}

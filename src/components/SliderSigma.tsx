@@ -1,17 +1,19 @@
 'use client'
 
 import useEmblaCarousel from 'embla-carousel-react'
+import { EmblaCarouselType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
 import { useEffect, useState, useCallback } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const banners = [
-    { id: 1, bg: '/images/PlayStation.png' },
-    { id: 2, bg: '/images/Samsung TV.png' },
-    { id: 3, bg: '/images/Phone.png' },
-    { id: 4, bg: '/images/Кондиціонери.png' },
-    { id: 5, bg: '/images/Рассрочка.png' },
-    { id: 6, bg: '/images/товаридня.png' },
+    { id: 1, bg: '/images/PlayStation.png', href: '/consoles' },
+    { id: 2, bg: '/images/Samsung TV.png', href: '/tvs' },
+    { id: 3, bg: '/images/Phone.png', href: '/phones' },
+    { id: 4, bg: '/images/Кондиціонери.png', href: '/appliances' },
+    { id: 5, bg: '/images/Рассрочка.png', href: '/credits' },
+    { id: 6, bg: '/images/товаридня.png', href: '/deals' },
 ]
 
 export default function BannerSlider() {
@@ -21,7 +23,8 @@ export default function BannerSlider() {
     )
     const [current, setCurrent] = useState(0)
 
-    const onSelect = useCallback((api) => {
+    const onSelect = useCallback((api: EmblaCarouselType | undefined) => {
+        if (!api) return
         setCurrent(api.selectedScrollSnap())
     }, [])
 
@@ -46,11 +49,12 @@ export default function BannerSlider() {
                                 key={`${banner.id}-${index}`}
                                 className="flex-shrink-0 w-[440px] px-3 transition-all duration-500 ease-out"
                             >
-                                <div
-                                    className={`relative h-[500px] w-full rounded-3xl overflow-hidden transition-all duration-500 ease-out shadow-sm
+                                <Link
+                                    href={banner.href}
+                                    className={`relative h-[500px] w-full rounded-3xl overflow-hidden transition-all duration-500 ease-out shadow-sm block
                                         ${isActive
                                             ? 'scale-100 opacity-100 shadow-md'
-                                            : 'scale-92 opacity-60'
+                                            : 'scale-92 opacity-60 pointer-events-none'
                                         }`}
                                 >
                                     <Image
@@ -61,13 +65,14 @@ export default function BannerSlider() {
                                         className="object-cover pointer-events-none select-none"
                                         priority={index === 0}
                                     />
-                                </div>
+                                </Link>
                             </div>
                         );
                     })}
                 </div>
             </div>
 
+            {/* Точки навигации */}
             <div className="flex gap-2.5 items-center mt-2">
                 {banners.map((_, index) => {
                     const isActive = index === current;

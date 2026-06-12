@@ -1,13 +1,12 @@
-import { Product } from "@/data/products";
+import { Phone } from "@/data/phones";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProductCard({ name, price, image, discount, stars }: Product) {
+export default function PhoneCard({ name, price, image, discount, stars, href }: Phone) {
     return (
-        <div className="w-56 rounded-2xl border border-[#FFB800] p-3 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between">
-
-            <div className="relative rounded-2xl overflow-hidden aspect-square h-60 w-full bg-[#FFB800]/50">
-                <Link href=''>
+        <div className="w-65 rounded-2xl border border-[#FFB800] p-3 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between">
+            <div className="relative rounded-2xl overflow-hidden aspect-square h-70 w-full bg-[#FFB800]/50">
+                <Link href={href}>
                     <Image
                         src={image}
                         alt={name}
@@ -16,7 +15,6 @@ export default function ProductCard({ name, price, image, discount, stars }: Pro
                         className="object-contain p-4 z-0"
                     />
                 </Link>
-
                 {discount > 0 && (
                     <span className="absolute top-3 left-3 z-10 bg-white/80 text-black text-xs font-bold px-3 py-2 rounded-2xl shadow-sm leading-tight">
                         вигода<br />{discount * 100}₴

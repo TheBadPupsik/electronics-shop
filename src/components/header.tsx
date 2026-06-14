@@ -57,11 +57,11 @@ export default function Header() {
                         <img src="/icons/mdi_heart.svg" alt='wish' />
                     </Link>
 
-                    <Link href="/" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0 transition-all duration-200 ease-in-out hover:bg-[#e6a602] active:scale-90">
+                    <Link href="/comparison" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0 transition-all duration-200 ease-in-out hover:bg-[#e6a602] active:scale-90">
                         <img src="/icons/material-symbols_balance.svg" alt='balance' />
                     </Link>
 
-                    <Link href="/" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0 transition-all duration-200 ease-in-out hover:bg-[#e6a602] active:scale-90">
+                    <Link href="/profile" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0 transition-all duration-200 ease-in-out hover:bg-[#e6a602] active:scale-90">
                         <img src="/icons/iconamoon_profile-fill.svg" alt='profileIcon' />
                     </Link>
 
@@ -86,8 +86,11 @@ export default function Header() {
             )}
 
             {cartOpen && (
-                <div className="absolute top-full right-0 w-full z-50 animate-dropdown origin-top">
-                    <Cart />
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+                    onClick={() => setCartOpen(false)}>
+                    <div onClick={e => e.stopPropagation()}>
+                        <Cart onClose={() => setCartOpen(false)} />
+                    </div>
                 </div>
             )}
         </header>

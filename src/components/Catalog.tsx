@@ -46,7 +46,7 @@ const subCategories = {
 export default function CatalogMenu() {
     return (
         <div className="bg-white shadow-xl border-t border-neutral-100 px-8 py-8 w-full">
-            <div className="max-w-[1440px] w-full mx-auto grid grid-cols-4 gap-8">
+            <div className="max-w-[1440px] w-full mx-auto grid grid-cols-5 gap-8">
 
                 <div className="flex flex-col gap-1 border-r border-neutral-100 pr-4">
                     {catalogChoise.map((item) => (
@@ -83,6 +83,8 @@ export default function CatalogMenu() {
                         ))}
                     </div>
                 ))}
+
+                <img src="/images/BannerCatalog.png" alt="Catalog Ad" className="w-full h-80 object-contain" />
 
             </div>
         </div>

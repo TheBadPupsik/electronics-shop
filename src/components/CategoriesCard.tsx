@@ -25,7 +25,7 @@ export default function CategoriesGrid() {
                     return (
                         <Link href={category.href}
                             key={category.id}
-                            className={`${gridClass} relative bg-[#FFF7ED] rounded-[32px] p-6 overflow-hidden flex flex-col justify-between group cursor-pointer hover:shadow-md transition-all duration-300`}
+                            className={`${gridClass} relative bg-gradient-to-br from-[#FFF7ED] to-[#FFE5B4] rounded-[32px] p-6 overflow-hidden flex flex-col justify-between group cursor-pointer shadow-[0_8px_30px_rgba(255,184,0,0.25)] hover:shadow-[0_12px_40px_rgba(255,184,0,0.4)] transition-all duration-300`}
                         >
                             <h3 className="relative z-10 text-[16px] text-black font-bold max-w-[140px] leading-tight">
                                 {category.name}

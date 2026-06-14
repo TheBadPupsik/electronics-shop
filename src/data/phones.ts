@@ -15,7 +15,7 @@ export const phones: Phone[] = [
         price: 35999,
         image: '/images/iphonepink.png',
         discount: 10,
-        href: '/phones/iphone-15-pink',
+        href: '/phones/iphone_pink',
         stars: 4.8
     },
     {

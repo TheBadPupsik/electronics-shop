@@ -2,12 +2,12 @@ import { Product } from "@/data/products";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProductCard({ name, price, image, discount, stars }: Product) {
+export default function ProductCard({ name, price, image, discount, stars, href }: Product) {
     return (
         <div className="w-56 rounded-2xl border border-[#FFB800] p-3 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between">
 
             <div className="relative rounded-2xl overflow-hidden aspect-square h-60 w-full bg-[#FFB800]/50">
-                <Link href=''>
+                <Link href={href}>
                     <Image
                         src={image}
                         alt={name}

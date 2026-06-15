@@ -53,7 +53,7 @@ export default function Header() {
 
                     </form>
 
-                    <Link href="/" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0 transition-all duration-200 ease-in-out hover:bg-[#e6a602] active:scale-90">
+                    <Link href="/favorite" className="bg-[#FFB800] rounded-xl p-2 w-11 h-11 text-white flex justify-center items-center flex-shrink-0 transition-all duration-200 ease-in-out hover:bg-[#e6a602] active:scale-90">
                         <img src="/icons/mdi_heart.svg" alt='wish' />
                     </Link>
 

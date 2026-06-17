@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import BottomNav from "@/components/mobilemenu";
 import Header from "@/components/Header";
 import Footer from "@/components/footer";
 
@@ -28,6 +29,8 @@ export default function RootLayout({
     <html>
       <body className="flex flex-col min-h-screen">
         <Header />
+
+        <BottomNav />
 
         <main className="flex-1">{children}</main>
 

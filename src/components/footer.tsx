@@ -1,14 +1,12 @@
 export default function Footer() {
     return (
-        <footer className="bg-gray-100 text-center py-6 mt-5 text-gray-500">
+        <footer className="bg-white md:bg-gray-100 py-6 mt-5 text-gray-500">
+            <div className="max-w-[1440px] w-full mx-auto px-4 md:px-6">
 
-            <div className="max-w-[1440px] w-full mx-auto px-4 md:px-0">
-
-                <div className="block md:hidden bg-[#FFB800] rounded-3xl p-6 text-center shadow-sm w-full max-w-sm mx-auto">
+                <div className="block md:hidden bg-[#FFB800] rounded-3xl p-6 text-center shadow-sm w-full max-w-sm mx-auto mb-6">
                     <h2 className="text-white font-bold text-2xl mb-4 leading-tight">
                         Встановлюй додаток
                     </h2>
-
                     <div className="flex justify-center mb-6">
                         <video
                             src="/Untitled_Artwork.mp4"
@@ -19,7 +17,6 @@ export default function Footer() {
                             className="w-58 h-58 object-contain"
                         />
                     </div>
-
                     <a
                         href="https://www.apple.com/app-store/"
                         target="_blank"
@@ -36,8 +33,7 @@ export default function Footer() {
                     </a>
                 </div>
 
-
-                <div className="hidden md:flex justify-center items-center bg-[#FFB800] md:rounded-2xl w-full p-6 flex-row justify-center items-center gap-8 shadow-sm">
+                <div className="hidden md:flex justify-center items-center bg-[#FFB800] md:rounded-2xl w-full p-6 flex-row gap-8 shadow-sm mb-10">
                     <video
                         src="/Untitled_Artwork.mp4"
                         autoPlay
@@ -46,7 +42,6 @@ export default function Footer() {
                         playsInline
                         className="w-50 h-50 object-contain"
                     />
-
                     <div className="flex flex-col text-left text-gray-800">
                         <h2 className="text-3xl font-extrabold leading-tight">
                             Скануй QR code<br />та встановлюй додаток
@@ -55,7 +50,6 @@ export default function Footer() {
                             Доступно для завантаження на платформах: Android, iOS
                         </p>
                     </div>
-
                     <img
                         src='/images/QR_code_for_mobile_English_Wikipedia.svg'
                         alt='qr_code'
@@ -63,156 +57,105 @@ export default function Footer() {
                     />
                 </div>
 
-            </div>
+                <div className="flex flex-col md:flex-row justify-between items-start gap-4 md:gap-8 mt-4 md:mt-10">
 
-            <div className="max-w-[1440px] w-full flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 mx-auto mt-8 md:mt-10 px-4">
-                <div className="flex flex-col text-left flex-1 min-w-[250px]">
-                    <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-2">Доставка</h2>
-                    <p className="text-sm text-gray-500 leading-relaxed">
-                        Самовивіз із магазину "Cursor", доставка за адресою або у відділення "Нова Пошта" і "Meest".
-                    </p>
-                </div>
-                <div className="flex flex-col text-left flex-1 min-w-[250px]">
-                    <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-2">Гарантія</h2>
-                    <p className="text-sm text-gray-500 leading-relaxed">
-                        Сертифікована техніка з офіційною гарантією від виробника.
-                    </p>
-                </div>
-                <div className="flex flex-col text-left flex-1 min-w-[250px]">
-                    <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-2">Оплата</h2>
-                    <p className="text-sm text-gray-500 leading-relaxed">
-                        Оплатити покупку можливо готівкою, карткою чи безготівковим розрахунком.
-                    </p>
-                </div>
-                <div className="flex flex-col text-left flex-1 min-w-[250px]">
-                    <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-2">Повернення</h2>
-                    <p className="text-sm text-gray-500 leading-relaxed">
-                        Повернення товару протягом 14 днів після покупки відповідно до чинного законодавства.
-                    </p>
-                </div>
-            </div>
-
-            <div className="max-w-[1440px] w-full mx-auto mt-8 md:mt-10 px-4">
-
-                <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8">
-
-                    <div className="bg-[#FFF7ED] md:bg-[#FFB800] rounded-2xl p-6 w-full md:w-80 flex flex-col gap-3">
+                    <div className="bg-[#FFF7ED] rounded-3xl p-6 w-full md:w-80 flex flex-col gap-3 text-left">
                         <div>
-                            <p className="text-gray-800 md:text-white font-bold text-lg">Підписуйтесь на знижки!</p>
-                            <p className="text-gray-500 md:text-white/70 text-sm">Не турбуйтесь, ми не спамимо</p>
+                            <p className="text-gray-800 font-bold text-base">Підписуйтесь на знижки!</p>
+                            <p className="text-gray-500 text-xs mt-1">Не турбуйтесь, ми не спамимо</p>
                         </div>
                         <input
                             type="email"
                             placeholder="email@email.com"
-                            className="w-full bg-white md:bg-[#f5f0e8] border border-gray-200 md:border-none rounded-lg px-4 py-3 text-sm outline-none placeholder-gray-400"
+                            className="w-full bg-white border border-gray-100 rounded-xl px-4 py-3 text-sm outline-none placeholder-gray-400 text-amber-500"
                         />
-                        <button className="w-full bg-black text-white rounded-lg py-3 text-sm font-medium hover:bg-gray-800 transition">
+                        <button className="w-full bg-neutral-800 text-white rounded-xl py-3 text-sm font-medium hover:bg-black transition">
                             Відправити
                         </button>
-                        <img src="/images/Untitled_Artwork 4 1.png" alt="Newsletter" className="w-full h-full object-contain" />
+                        <div className="flex justify-center mt-2">
+                            <img src="/images/Untitled_Artwork 4 1.png" alt="Newsletter" className="w-48 h-auto object-contain" />
+                        </div>
                     </div>
 
-                    <div className="flex flex-col md:flex-row gap-0 md:gap-8 w-full md:w-auto">
+                    <div className="flex flex-col md:flex-row gap-3 md:gap-8 w-full md:w-auto flex-1 md:justify-center px-1 md:px-0">
 
-                        <div className="border-b border-gray-200 md:border-none py-4 md:py-0">
-                            <div className="flex items-center justify-between md:block">
-                                <p className="font-bold text-base mb-0 md:mb-1">Cursor</p>
-                                <span className="md:hidden">⌄</span>
-                            </div>
-                            <div className="hidden md:flex flex-col gap-2 mt-1">
+                        <div className="w-full md:w-auto bg-[#FFF7ED] md:bg-transparent rounded-2xl px-5 py-4 md:p-0 text-left">
+                            <p className="font-bold text-gray-800 text-base mb-1">Cursor</p>
+                            <div className="hidden md:flex flex-col gap-2.5 mt-3">
                                 {['Про компанію', 'Магазини', 'Контакти', 'Прес-центр', 'Робота в CURSOR', 'Безпека та застереження', 'Тендер', 'Партнерам', 'Каталог товарів', 'CURSOR допомагає'].map(item => (
                                     <a key={item} href="#" className="text-gray-400 text-sm hover:text-black transition">{item}</a>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="border-b border-gray-200 md:border-none py-4 md:py-0">
-                            <div className="flex items-center justify-between md:block">
-                                <p className="font-bold text-base mb-0 md:mb-1">Допомога покупцеві</p>
-                                <span className="md:hidden">⌄</span>
-                            </div>
-                            <div className="hidden md:flex flex-col gap-2 mt-1">
+                        <div className="w-full md:w-auto bg-[#FFF7ED] md:bg-transparent rounded-2xl px-5 py-4 md:p-0 text-left">
+                            <p className="font-bold text-gray-800 text-base mb-1">Допомога покупцеві</p>
+                            <div className="hidden md:flex flex-col gap-2.5 mt-3">
                                 {['Центр допомоги клієнтам', 'Знайти замовлення', 'Умови доставки', 'Обмін і повернення товару', 'Гарантія', 'Правила користування сайтом'].map(item => (
                                     <a key={item} href="#" className="text-gray-400 text-sm hover:text-black transition">{item}</a>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="border-b border-gray-200 md:border-none py-4 md:py-0 md:hidden">
-                            <div className="flex items-center justify-between">
-                                <p className="font-bold text-base">Наші переваги</p>
-                                <span>⌄</span>
-                            </div>
+                        <div className="w-full md:w-auto bg-[#FFF7ED] md:bg-transparent rounded-2xl px-5 py-4 md:p-0 text-left">
+                            <p className="font-bold text-gray-800 text-base mb-1">Наші переваги</p>
                         </div>
 
-                        <div className="border-b border-gray-200 md:border-none py-4 md:py-0 md:hidden">
-                            <div className="flex items-center justify-between">
-                                <p className="font-bold text-base">Категорії</p>
-                                <span>⌄</span>
-                            </div>
+                        <div className="w-full md:w-auto bg-[#FFF7ED] md:bg-transparent rounded-2xl px-5 py-4 md:p-0 text-left">
+                            <p className="font-bold text-gray-800 text-base mb-1">Категорії</p>
                         </div>
 
                     </div>
 
-                    <div className="flex flex-col gap-2 text-left mt-4 md:mt-0">
-                        <p className="font-bold text-base mb-1">Консультація</p>
-                        <div className="flex items-center gap-2">
-                            <img src='/icons/line-md_phone-filled.svg' alt='phone' className="w-5 h-5" />
-                            <span className="font-bold text-xl md:text-2xl">0-800-303-505</span>
+                    <div className="bg-[#FFF7ED] md:bg-transparent rounded-3xl p-6 md:p-0 flex flex-col gap-2 text-left w-full md:w-auto">
+                        <p className="font-bold text-gray-800 text-base mb-1">Консультація</p>
+                        <div className="flex flex-col gap-1">
+                            <span className="font-extrabold text-2xl md:text-3xl text-gray-900 tracking-tight">0-800-303-505</span>
+                            <span className="font-extrabold text-2xl md:text-3xl text-gray-900 tracking-tight">0-800-600-506</span>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <img src='/icons/line-md_phone-filled.svg' alt='phone' className="w-5 h-5" />
-                            <span className="font-bold text-xl md:text-2xl">0-800-600-506</span>
-                        </div>
-                        <p className="text-gray-400 text-sm">Безкоштовно по Україні</p>
-                        <p className="text-gray-400 text-sm mb-2">08:00 - 21:00 Пн-Нд</p>
-                        <div className="flex items-center gap-2">
-                            <img src='/icons/Email.svg' alt='email' className="w-5 h-5" />
-                            <a href="mailto:info@cursor.ua" className="text-gray-400 text-sm hover:text-black transition">info@cursor.ua</a>
+                        <p className="text-gray-500 text-xs mt-1">Безкоштовно по Україні</p>
+                        <p className="text-gray-500 text-xs mb-3">08:00 - 21:00 Пн-Нд</p>
+                        <div className="flex items-center gap-2 mb-4">
+                            <img src='/icons/Email.svg' alt='email' className="w-4 h-4 text-gray-800" />
+                            <a href="mailto:info@cursor.ua" className="text-gray-800 font-medium text-sm hover:underline">info@cursor.ua</a>
                         </div>
 
-                        <div className="flex flex-col gap-2 mt-3 md:hidden">
-                            <a href="#" className="border border-[#FFB800] rounded-full text-center py-2.5 text-sm font-medium">Центр допомоги</a>
-                            <a href="#" className="border border-[#FFB800] rounded-full text-center py-2.5 text-sm font-medium">Чат на сайту</a>
-                            <a href="#" className="border border-[#FFB800] rounded-full text-center py-2.5 text-sm font-medium flex items-center justify-center gap-2">Telegram</a>
-                            <a href="#" className="border border-[#FFB800] rounded-full text-center py-2.5 text-sm font-medium flex items-center justify-center gap-2">Viber</a>
-                            <a href="#" className="border border-[#FFB800] rounded-full text-center py-2.5 text-sm font-medium flex items-center justify-center gap-2">Messenger</a>
-                            <a href="#" className="border border-[#FFB800] rounded-full text-center py-2.5 text-sm font-medium flex items-center justify-center gap-2">Apple Messages</a>
+                        <div className="flex flex-col gap-2.5 w-full md:hidden">
+                            {['Центр допомоги', 'Чат на сайті', 'Telegram', 'Viber', 'Messenger', 'Apple Messages'].map((label) => (
+                                <a
+                                    key={label}
+                                    href="#"
+                                    className="border border-[#FFB800] bg-white text-gray-800 rounded-xl text-center py-3 text-sm font-semibold transition"
+                                >
+                                    {label}
+                                </a>
+                            ))}
                         </div>
 
                         <div className="hidden md:flex flex-col gap-1 mt-2">
                             <a href="#" className="text-gray-400 text-sm hover:text-black transition">Центр допомоги</a>
                             <a href="#" className="text-gray-400 text-sm hover:text-black transition">Чат на сайті</a>
                         </div>
-                        <div className="hidden md:flex flex-col gap-1 mt-1">
-                            <a href="#" className="text-gray-400 text-sm hover:text-black transition flex items-center gap-2"><span>•</span> Telegram</a>
-                            <a href="#" className="text-gray-400 text-sm hover:text-black transition flex items-center gap-2"><span>•</span> Viber</a>
-                            <a href="#" className="text-gray-400 text-sm hover:text-black transition flex items-center gap-2"><span>•</span> Messenger</a>
-                            <a href="#" className="text-gray-400 text-sm hover:text-black transition flex items-center gap-2"><span>•</span> Apple Messages</a>
-                        </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-between mt-8 md:mt-10 pt-6 border-t border-gray-200 gap-4">
-                    <p className="text-sm text-gray-500 order-2 md:order-1">© Всі права захищені ТОВ «КУРСОР», 2010–2026</p>
+                <div className="flex flex-col md:flex-row items-center justify-between mt-8 md:mt-12 pt-6 border-t border-gray-100 gap-5">
 
-                    <div className="flex items-center gap-4 order-1 md:order-2">
-                        <a href="#" className="hover:opacity-70 transition">
-                            <img src="/icons/instagram.svg" alt="Instagram" className="w-6 h-6" />
-                        </a>
-                        <a href="#" className="hover:opacity-70 transition">
-                            <img src="/icons/facebook F.svg" alt="Facebook" className="w-6 h-6" />
-                        </a>
-                        <a href="#" className="hover:opacity-70 transition">
-                            <img src="/icons/youtube.svg" alt="YouTube" className="w-6 h-6" />
-                        </a>
-                        <a href="#" className="hover:opacity-70 transition">
-                            <img src="/icons/Telegram App.svg" alt="Telegram App" className="w-6 h-6" />
-                        </a>
-                        <a href="#" className="hover:opacity-70 transition">
-                            <img src="/icons/Ringer Volume.svg" alt="Viber" className="w-6 h-6" />
-                        </a>
+                    <div className="flex items-center justify-center gap-4 order-1 md:order-2 w-full md:w-auto">
+                        {['instagram', 'facebook F', 'youtube', 'Telegram App', 'Ringer Volume'].map((icon) => (
+                            <a
+                                key={icon}
+                                href="#"
+                                className="w-12 h-12 bg-[#FFF7ED] md:bg-transparent rounded-full flex items-center justify-center hover:opacity-80 transition"
+                            >
+                                <img src={`/icons/${icon}.svg`} alt={icon} className="w-5 h-5 object-contain" />
+                            </a>
+                        ))}
                     </div>
+
+                    <p className="text-xs font-bold text-gray-900 order-2 md:order-1 text-center md:text-left mt-2 md:mt-0">
+                        © Всі права захищені ТОВ «КУРСОР», 2010–2026
+                    </p>
                 </div>
 
             </div>

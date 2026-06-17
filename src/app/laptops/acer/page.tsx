@@ -1,11 +1,10 @@
 'use client'
 import { useState } from 'react'
-import Comments from '@/components/Comments'
+import CommentsLaptop from '@/components/CommentsLaptop'
 
 const Pictures = [
-    "/images/iphonePink.png",
-    "/images/iphonePink2.png",
-    "/images/iphonePink3.png",
+    "/images/Acer1.png",
+    "/images/acer_03_tmp216-51-tco.png",
 ]
 
 const PaymentMethod = [
@@ -16,16 +15,8 @@ const PaymentMethod = [
     { id: 5, name: "Visa", image: "/images/visa.png" },
 ]
 
-const colors = [
-    { name: 'Блакитний', hex: '#A8C5D9' },
-    { name: 'Рожевий', hex: '#F2B8C6' },
-    { name: 'Чорний', hex: '#2B2B2B' },
-    { name: 'Зелений', hex: '#A8C5A0' },
-    { name: 'Жовтий', hex: '#F2D88A' },
-]
-
-const series = ['Apple Iphone 15', 'Apple Iphone 15 Plus']
-const storage = ['128 ГБ', '256 ГБ', '512 ГБ']
+const series = ['Acer', 'Acer Pro']
+const storage = ['500 ГБ', '1000 ТБ', '2000 ТБ']
 
 const specs = [
     { label: 'Діагонал дисплея:', value: '6,1"' },
@@ -92,11 +83,6 @@ export default function IphonePink() {
 
                     <div className="md:hidden mt-4">
                         <p className="font-bold text-base mb-2">Інші моделі, кольори</p>
-                        <div className="flex gap-2 mb-3">
-                            {colors.map(color => (
-                                <button key={color.name} className="w-8 h-8 rounded-full border-2 border-gray-200" style={{ backgroundColor: color.hex }} />
-                            ))}
-                        </div>
                         <div className="flex flex-col gap-2">
                             {series.map(s => (
                                 <button key={s} onClick={() => setSelectedSeries(s)}
@@ -147,7 +133,7 @@ export default function IphonePink() {
                 </div>
 
                 <div className="hidden md:flex flex-col gap-6 flex-1">
-                    <h1 className="text-3xl font-bold">Смартфон Apple iPhone 15 Pink</h1>
+                    <h1 className="text-3xl font-bold">Acer TravelMate P2 TMP216-15 </h1>
 
                     <div className="flex items-center gap-4 text-sm">
                         <span className="flex items-center gap-1 text-green-600 font-medium">✓ В наявності</span>
@@ -178,18 +164,6 @@ export default function IphonePink() {
                         <div className="flex items-center justify-between text-sm text-gray-600">
                             <p>До відділення Нова пошта<br />11 липня</p>
                             <span className="font-bold">1₴</span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p className="font-bold text-base mb-3">Інший колір</p>
-                        <div className="flex gap-3">
-                            {colors.map(color => (
-                                <button key={color.name} className="flex flex-col items-center gap-1">
-                                    <span className="w-10 h-10 rounded-full border-2 border-gray-200" style={{ backgroundColor: color.hex }} />
-                                    <span className="text-xs text-gray-500">{color.name}</span>
-                                </button>
-                            ))}
                         </div>
                     </div>
 
@@ -251,7 +225,7 @@ export default function IphonePink() {
                 </div>
             </div>
 
-            <Comments />
+            <CommentsLaptop />
         </div>
     )
 }

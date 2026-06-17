@@ -5,16 +5,16 @@ export default function CatalogBarPhone() {
     const [open, setOpen] = useState(false)
 
     const items = [
-        { id: 1, name: 'Смартфони', hasArrow: false },
-        { id: 2, name: 'Відновлені смартфони', hasArrow: true },
-        { id: 3, name: 'Смартфони Apple', hasArrow: true },
-        { id: 4, name: 'Смартфони Samsung', hasArrow: true },
-        { id: 5, name: 'Смартфони Xiaomi', hasArrow: false },
-        { id: 6, name: 'Смартфони Motorola', hasArrow: false },
-        { id: 7, name: 'Смартфони OPPO', hasArrow: false },
-        { id: 8, name: 'Мобільні телефони', hasArrow: true },
-        { id: 9, name: 'Аксесуари для смартфонів', hasArrow: false },
-        { id: 10, name: 'Телефони для дому та офісу', hasArrow: false },
+        { id: 1, name: 'Ноутбуки', hasArrow: false },
+        { id: 2, name: 'Відновлені ноутбуки', hasArrow: true },
+        { id: 3, name: 'Ноутбуки Asus', hasArrow: true },
+        { id: 4, name: 'Ноутбуки Apple', hasArrow: true },
+        { id: 5, name: 'Ноутбуки Acer', hasArrow: false },
+        { id: 6, name: 'Ноутбуки Lenovo', hasArrow: false },
+        { id: 7, name: 'Ноутбуки HP', hasArrow: false },
+        { id: 8, name: 'Ноутбуки Dell', hasArrow: true },
+        { id: 9, name: 'Аксесуари для ноутбуків', hasArrow: false },
+        { id: 10, name: 'Ноутбуки для офісу', hasArrow: false },
         { id: 11, name: 'Стартові пакети', hasArrow: false },
     ]
 

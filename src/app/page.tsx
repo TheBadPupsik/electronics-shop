@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
           <h1 className="text-xl sm:text-2xl font-bold">Фоворити</h1>
           <img src="/icons/material-symbols_crown.svg" alt="Favorites" className="w-5 h-5 sm:w-6 sm:h-6" />
-          <p className="font-bold text-sm sm:text-base text-gray-500 cursor-pointer hover:text-gray-700 ml-auto">Дивитися всі &gt;</p>
+          <p className="font-bold text-sm sm:text-base text-[#FFB800] cursor-pointer hover:text-[#FFB800]/50 ml-auto">Дивитися всі &gt;</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-5 mt-5">

@@ -3,12 +3,15 @@ export default function Footer() {
         <footer className="bg-gray-100 text-center py-6 mt-5 text-gray-500">
             <div className="max-w-[1440px] bg-[#FFB800] w-full p-6 flex justify-center items-center gap-4 mx-auto">
 
-                <img src='/images/QR_code_for_mobile_English_Wikipedia.svg' alt='qr_code' className="w-55 h-55 bg-white" />
+                <video src="/Untitled_Artwork.mp4" autoPlay muted loop className="w-55 h-55" />
 
                 <div className="flex flex-col text-left">
                     <h2 className="text-4xl font-bold text-gray-800">Скануй QR code та встановлюй додаток</h2>
                     <p>Доступно для завантаження на платформах: Android, iOS</p>
                 </div>
+
+                <img src='/images/QR_code_for_mobile_English_Wikipedia.svg' alt='qr_code' className="w-55 h-55 bg-white" />
+
             </div>
 
             <div className="max-w-[1440px] w-full flex flex-col md:flex-row justify-between items-start gap-8 mx-auto mt-10">
@@ -85,11 +88,11 @@ export default function Footer() {
                     <div className="flex flex-col gap-2">
                         <p className="font-bold text-base mb-1">Консультація</p>
                         <div className="flex items-center gap-2">
-                            <img src='/icons/line-md_phone-filled.svg' alt='phone'/>
+                            <img src='/icons/line-md_phone-filled.svg' alt='phone' />
                             <span className="font-bold text-2xl">0-800-303-505</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <img src='/icons/line-md_phone-filled.svg' alt='phone'/>
+                            <img src='/icons/line-md_phone-filled.svg' alt='phone' />
                             <span className="font-bold text-2xl">0-800-600-506</span>
                         </div>
                         <p className="text-gray-400 text-sm">Безкоштовно по Україні</p>

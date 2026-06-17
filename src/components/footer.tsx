@@ -16,7 +16,7 @@ export default function Footer() {
                             muted
                             loop
                             playsInline
-                            className="w-48 h-48 object-contain"
+                            className="w-58 h-58 object-contain"
                         />
                     </div>
 
@@ -37,14 +37,14 @@ export default function Footer() {
                 </div>
 
 
-                <div className="hidden md:flex bg-[#FFB800] md:rounded-2xl w-full p-6 flex-row justify-center items-center gap-8 shadow-sm">
+                <div className="hidden md:flex justify-center items-center bg-[#FFB800] md:rounded-2xl w-full p-6 flex-row justify-center items-center gap-8 shadow-sm">
                     <video
                         src="/Untitled_Artwork.mp4"
                         autoPlay
                         muted
                         loop
                         playsInline
-                        className="w-40 h-40 object-contain"
+                        className="w-50 h-50 object-contain"
                     />
 
                     <div className="flex flex-col text-left text-gray-800">

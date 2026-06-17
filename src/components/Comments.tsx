@@ -7,9 +7,6 @@ const reviewPhotos = [
     "/images/review3.jpg",
     "/images/review4.jpg",
     "/images/review5.jpg",
-    "/images/review6.jpg",
-    "/images/review7.jpg",
-    "/images/review8.jpg",
 ]
 
 const ratingBreakdown = [

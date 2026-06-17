@@ -21,6 +21,7 @@ export default function Home() {
       <div className="max-w-[1440px] w-full mx-auto mt-10">
         <div className="flex items-center gap-3">
           <h1 className="text-2xl font-bold">Фоворити</h1>
+          <img src="/icons/material-symbols_crown.svg" alt="Favorites" className="w-6 h-6" />
           <p className="font-bold text-gray-500 cursor-pointer hover:text-gray-700">Дивитися всі &gt;</p>
         </div>
 

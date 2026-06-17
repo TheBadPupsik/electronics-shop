@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Comments from '@/components/Comments'
 
 const Pictures = [
     "/images/iphonePink.png",
@@ -103,7 +104,6 @@ export default function IphonePink() {
                     </div>
                 </div>
 
-                {/* Правая часть — инфо о товаре */}
                 <div className="flex flex-col gap-6 flex-1">
                     <h1 className="text-3xl font-bold">Смартфон Apple iPhone 15 Pink</h1>
 
@@ -125,7 +125,7 @@ export default function IphonePink() {
                             </div>
                         </div>
                         <button className="bg-[#FFB800] text-white font-bold py-3 rounded-xl hover:bg-[#e6a602] transition-colors">
-                            🛒 Купити
+                            Купити
                         </button>
                     </div>
 
@@ -198,6 +198,7 @@ export default function IphonePink() {
 
                 </div>
             </div>
+            <Comments />
         </div>
     )
 }

@@ -2,15 +2,67 @@ export default function Footer() {
     return (
         <footer className="bg-gray-100 text-center py-6 mt-5 text-gray-500">
 
-            <div className="max-w-[1440px] bg-[#FFB800] w-full p-4 md:p-6 flex flex-col md:flex-row justify-center items-center gap-4 mx-auto">
-                <video src="/Untitled_Artwork.mp4" autoPlay muted loop className="w-32 h-32 md:w-55 md:h-55" />
+            <div className="max-w-[1440px] w-full mx-auto px-4 md:px-0">
 
-                <div className="flex flex-col text-center md:text-left">
-                    <h2 className="text-xl md:text-4xl font-bold text-gray-800">Скануй QR code та встановлюй додаток</h2>
-                    <p className="text-sm md:text-base">Доступно для завантаження на платформах: Android, iOS</p>
+                <div className="block md:hidden bg-[#FFB800] rounded-3xl p-6 text-center shadow-sm w-full max-w-sm mx-auto">
+                    <h2 className="text-white font-bold text-2xl mb-4 leading-tight">
+                        Встановлюй додаток
+                    </h2>
+
+                    <div className="flex justify-center mb-6">
+                        <video
+                            src="/Untitled_Artwork.mp4"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="w-48 h-48 object-contain"
+                        />
+                    </div>
+
+                    <a
+                        href="https://www.apple.com/app-store/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-3 bg-black text-white rounded-xl py-3 px-4 hover:bg-neutral-900 transition w-full"
+                    >
+                        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.21.67-2.93 1.49-.63.73-1.18 1.87-1.03 2.97 1.12.09 2.27-.57 2.97-1.4z" />
+                        </svg>
+                        <div className="text-left leading-tight">
+                            <p className="text-[10px] uppercase text-neutral-400">Download on the</p>
+                            <p className="text-sm font-semibold -mt-0.5">App Store</p>
+                        </div>
+                    </a>
                 </div>
 
-                <img src='/images/QR_code_for_mobile_English_Wikipedia.svg' alt='qr_code' className="hidden md:block w-50 h-50 bg-white" />
+
+                <div className="hidden md:flex bg-[#FFB800] md:rounded-2xl w-full p-6 flex-row justify-center items-center gap-8 shadow-sm">
+                    <video
+                        src="/Untitled_Artwork.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-40 h-40 object-contain"
+                    />
+
+                    <div className="flex flex-col text-left text-gray-800">
+                        <h2 className="text-3xl font-extrabold leading-tight">
+                            Скануй QR code<br />та встановлюй додаток
+                        </h2>
+                        <p className="text-sm text-gray-700 mt-2 font-medium">
+                            Доступно для завантаження на платформах: Android, iOS
+                        </p>
+                    </div>
+
+                    <img
+                        src='/images/QR_code_for_mobile_English_Wikipedia.svg'
+                        alt='qr_code'
+                        className="w-36 h-36 bg-white p-3 rounded-2xl shadow-inner select-none pointer-events-none"
+                    />
+                </div>
+
             </div>
 
             <div className="max-w-[1440px] w-full flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 mx-auto mt-8 md:mt-10 px-4">

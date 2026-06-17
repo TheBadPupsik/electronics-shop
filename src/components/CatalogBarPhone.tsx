@@ -1,4 +1,9 @@
+'use client'
+import { useState } from 'react'
+
 export default function CatalogBarPhone() {
+    const [open, setOpen] = useState(false)
+
     const items = [
         { id: 1, name: 'Смартфони', hasArrow: false },
         { id: 2, name: 'Відновлені смартфони', hasArrow: true },
@@ -14,14 +19,17 @@ export default function CatalogBarPhone() {
     ]
 
     return (
-        <div className="w-72 bg-gray-100 rounded-2xl p-4 flex flex-col gap-3">
+        <div className="w-full md:w-72 bg-gray-100 rounded-2xl p-4 flex flex-col gap-3">
 
-            <div className="flex items-center justify-between">
+            <button onClick={() => setOpen(!open)} className="flex items-center justify-between md:cursor-default">
                 <span className="font-bold text-base">Розділи</span>
-                <button className="w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center text-gray-400">
+                <span className={`w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center text-gray-400 transition-transform duration-300 ${open ? 'rotate-180' : ''} md:hidden`}>
+                    ⌄
+                </span>
+                <span className="hidden md:flex w-8 h-8 rounded-full border border-gray-400 items-center justify-center text-gray-400">
                     ↑
-                </button>
-            </div>
+                </span>
+            </button>
 
             <div className="flex items-center border border-gray-300 rounded-xl px-3 py-2 gap-2">
                 <input
@@ -32,7 +40,10 @@ export default function CatalogBarPhone() {
                 <span className="text-gray-400 text-sm">🔍</span>
             </div>
 
-            <ul className="flex flex-col">
+            {/* На мобиле список скрыт по умолчанию, на десктопе всегда открыт */}
+            <ul className={`flex flex-col overflow-hidden transition-all duration-300
+                md:max-h-none md:opacity-100
+                ${open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0 md:max-h-none md:opacity-100'}`}>
                 {items.map(item => (
                     <li key={item.id}>
                         <a href="#" className="flex items-center justify-between py-2 text-sm hover:font-semibold transition-all duration-150">

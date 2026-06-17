@@ -44,11 +44,11 @@ export default function IphonePink() {
     const next = () => setCurrentIndex((currentIndex + 1) % Pictures.length)
 
     return (
-        <div className="max-w-[1440px] w-full mx-auto mt-10 px-4">
-            <div className="flex flex-row gap-16">
+        <div className="max-w-[1440px] w-full mx-auto mt-6 md:mt-10 px-4">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-16">
 
                 <div className="flex flex-col">
-                    <div className="flex items-center justify-center gap-4 bg-[#FFB800]/50 rounded-[32px] w-[500px] h-[500px] p-6 relative">
+                    <div className="flex items-center justify-center gap-4 bg-[#FFB800]/50 rounded-[32px] w-full md:w-[500px] h-[320px] md:h-[500px] p-4 md:p-6 relative">
                         <img
                             src={Pictures[currentIndex]}
                             alt="iPhone Pink"
@@ -56,25 +56,69 @@ export default function IphonePink() {
                         />
 
                         <button onClick={prev}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFB800] flex items-center justify-center text-white font-bold hover:bg-[#e6a602] transition-colors">
+                            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#FFB800] flex items-center justify-center text-white font-bold hover:bg-[#e6a602] transition-colors">
                             &lt;
                         </button>
 
                         <button onClick={next}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFB800] flex items-center justify-center text-white font-bold hover:bg-[#e6a602] transition-colors">
+                            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#FFB800] flex items-center justify-center text-white font-bold hover:bg-[#e6a602] transition-colors">
                             &gt;
                         </button>
+                    </div>
 
-                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                            {Pictures.map((_, i) => (
-                                <button key={i} onClick={() => setCurrentIndex(i)}
-                                />
+                    <div className="flex md:hidden items-center justify-between gap-3 mt-4">
+                        <span className="text-2xl font-bold text-[#FFB800] bg-[#FFF7ED] rounded-xl px-4 py-2">35 999 ₴</span>
+                        <button className="flex-1 bg-[#FFB800] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#e6a602] transition-colors">
+                            🛒 Купити
+                        </button>
+                    </div>
+
+                    <div className="flex items-center justify-between text-sm mt-3 md:hidden">
+                        <span className="flex items-center gap-1 text-green-600 font-medium">✓ В наявності</span>
+                        <span className="text-[#FFB800]">★★★★★</span>
+                        <span className="text-gray-500">111</span>
+                        <span className="text-gray-400 text-xs">Код: 2600807</span>
+                    </div>
+
+                    <div className="md:hidden mt-4">
+                        <div className="flex items-center justify-between mb-2">
+                            <p className="font-bold text-base">Характеристики</p>
+                            <a href="#" className="text-xs text-gray-400">Всі характеристики</a>
+                        </div>
+                        <p className="text-xs text-gray-500 leading-relaxed">
+                            {specs.map(s => `${s.label} ${s.value}`).join(' - ')}
+                        </p>
+                    </div>
+
+                    <div className="md:hidden mt-4">
+                        <p className="font-bold text-base mb-2">Інші моделі, кольори</p>
+                        <div className="flex gap-2 mb-3">
+                            {colors.map(color => (
+                                <button key={color.name} className="w-8 h-8 rounded-full border-2 border-gray-200" style={{ backgroundColor: color.hex }} />
+                            ))}
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            {series.map(s => (
+                                <button key={s} onClick={() => setSelectedSeries(s)}
+                                    className={`px-4 py-2 rounded-lg border text-sm text-left transition-colors
+                                        ${selectedSeries === s ? 'border-[#FFB800] bg-[#FFF7ED]' : 'border-gray-200'}`}>
+                                    {s}
+                                </button>
+                            ))}
+                        </div>
+                        <div className="flex gap-2 mt-2">
+                            {storage.map(s => (
+                                <button key={s} onClick={() => setSelectedStorage(s)}
+                                    className={`px-4 py-2 rounded-lg border text-sm transition-colors
+                                        ${selectedStorage === s ? 'border-[#FFB800] bg-[#FFF7ED]' : 'border-gray-200'}`}>
+                                    {s}
+                                </button>
                             ))}
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-8 mt-6">
-                        <div className="flex gap-4 mt-6">
+                    <div className="flex flex-col gap-6 md:gap-8 mt-6">
+                        <div className="hidden md:flex gap-4">
                             {Pictures.map((pic, i) => (
                                 <img key={i} src={pic} alt={`iPhone Pink ${i + 1}`}
                                     onClick={() => setCurrentIndex(i)}
@@ -84,33 +128,29 @@ export default function IphonePink() {
                             ))}
                         </div>
 
-                        <p className="text-base text-left">
-                            Оплачуйте покупку готівкою, карткою або перерахунком на банківські
-                            <br />реквізити (безготівкою)
+                        <p className="text-sm md:text-base text-left">
+                            Оплачуйте покупку готівкою, карткою або перерахунком на банківські реквізити (безготівкою)
                         </p>
 
-                        <div className="flex gap-4">
+                        <div className="flex gap-3 md:gap-4 flex-wrap">
                             {PaymentMethod.map((method) => (
-                                <span key={method.id} className="w-18 h-10 rounded-full bg-[#FFB800] flex items-center justify-center">
-                                    <img src={method.image} alt={method.name} className="w-12 h-12 object-contain" />
+                                <span key={method.id} className="w-14 h-8 md:w-18 md:h-10 rounded-full bg-[#FFB800] flex items-center justify-center">
+                                    <img src={method.image} alt={method.name} className="w-9 h-9 md:w-12 md:h-12 object-contain" />
                                 </span>
                             ))}
                         </div>
 
-                        <p className="text-base text-left">
-                            Всі товари мають сертифікати та гарантії від виробника.<br />Повернути їх
-                            можна протягом 14 днів після покупки.
+                        <p className="text-sm md:text-base text-left">
+                            Всі товари мають сертифікати та гарантії від виробника. Повернути їх можна протягом 14 днів після покупки.
                         </p>
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-6 flex-1">
+                <div className="hidden md:flex flex-col gap-6 flex-1">
                     <h1 className="text-3xl font-bold">Смартфон Apple iPhone 15 Pink</h1>
 
                     <div className="flex items-center gap-4 text-sm">
-                        <span className="flex items-center gap-1 text-green-600 font-medium">
-                            ✓ В наявності
-                        </span>
+                        <span className="flex items-center gap-1 text-green-600 font-medium">✓ В наявності</span>
                         <span className="text-[#FFB800]">★★★★★</span>
                         <span className="text-gray-500">111</span>
                         <span className="text-gray-400">Код: 2600807</span>
@@ -198,6 +238,19 @@ export default function IphonePink() {
 
                 </div>
             </div>
+
+            <div className="md:hidden bg-[#FFF7ED] rounded-2xl p-6 flex flex-col gap-3 mt-8">
+                <p className="font-bold text-base">Доставка</p>
+                <div className="flex items-center justify-between">
+                    <span className="text-[#FFB800] font-medium">Одеса</span>
+                    <span>⌄</span>
+                </div>
+                <div className="flex items-center justify-between text-sm text-gray-600">
+                    <p>До відділення Нова пошта<br />11 липня</p>
+                    <span className="font-bold">1₴</span>
+                </div>
+            </div>
+
             <Comments />
         </div>
     )

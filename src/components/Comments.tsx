@@ -2,11 +2,11 @@
 import { useState } from 'react'
 
 const reviewPhotos = [
-    "/images/review1.jpg",
-    "/images/review2.jpg",
-    "/images/review3.jpg",
-    "/images/review4.jpg",
-    "/images/review5.jpg",
+    "/images/Rectangle 191.png",
+    "/images/Rectangle 192.png",
+    "/images/Rectangle 196.png",
+    "/images/Rectangle 197.png",
+    "/images/Rectangle 198.png",
 ]
 
 const ratingBreakdown = [

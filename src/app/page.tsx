@@ -5,9 +5,9 @@ import CategoriesGrid from "@/components/CategoriesCard";
 import BannerSlider from "@/components/SliderSigma";
 
 const promoCards = [
-  { id: 1, title: "Здай стару техніку та отримай до 5000 грн виходи", daysLeft: 5, image: "/images/обміняй старе на нове.png" },
-  { id: 2, title: "Обирай будь-які товари зі спеціальною позначкою", daysLeft: 3, image: "/images/другий товар дешевше.png" },
-  { id: 3, title: "Ноутбики, планшети та телефони Apple", daysLeft: 7, image: "/images/тиждень apple.png" },
+  { id: 1, title: "Здай стару техніку та отримай до 5000 грн виходи", daysLeft: 5, image: "/images/tradeoffer.png" },
+  { id: 2, title: "Обирай будь-які товари зі спеціальною позначкою", daysLeft: 3, image: "/images/seconditemcheeper.png" },
+  { id: 3, title: "Ноутбики, планшети та телефони Apple", daysLeft: 7, image: "/images/weekapple.png" },
 ];
 
 export default function Home() {

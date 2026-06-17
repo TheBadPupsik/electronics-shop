@@ -11,9 +11,9 @@ const banners = [
     { id: 1, bg: '/images/PlayStation.png', href: '/consoles' },
     { id: 2, bg: '/images/Samsung TV.png', href: '/tvs' },
     { id: 3, bg: '/images/Phone.png', href: '/phones' },
-    { id: 4, bg: '/images/Кондиціонери.png', href: '/appliances' },
-    { id: 5, bg: '/images/Рассрочка.png', href: '/credits' },
-    { id: 6, bg: '/images/товаридня.png', href: '/deals' },
+    { id: 4, bg: '/images/Kondicianer.png', href: '/appliances' },
+    { id: 5, bg: '/images/Rasrochka.png', href: '/credits' },
+    { id: 6, bg: '/images/todaytovar.png', href: '/deals' },
 ]
 
 export default function BannerSlider() {

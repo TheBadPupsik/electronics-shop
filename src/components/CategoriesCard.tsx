@@ -19,7 +19,6 @@ export default function CategoriesGrid() {
     return (
         <section className="max-w-[1440px] w-full mx-auto py-6">
 
-            {/* Мобильная версия: горизонтальный скролл круглых иконок */}
             <div className="flex sm:hidden gap-5 overflow-x-auto px-4 pb-1 -mx-4">
                 <Link href="/favorites" className="flex flex-col items-center gap-2 shrink-0 w-16">
                     <div className="w-14 h-14 rounded-full bg-[#FFB800] flex items-center justify-center shadow-sm">
@@ -48,7 +47,6 @@ export default function CategoriesGrid() {
                 ))}
             </div>
 
-            {/* Планшет / десктоп: bento-грид */}
             <div
                 className="hidden sm:grid gap-4 auto-rows-[130px]"
                 style={{ gridTemplateColumns: 'repeat(6, 1fr)' }}

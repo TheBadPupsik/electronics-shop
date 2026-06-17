@@ -9,11 +9,11 @@ const Pictures = [
 ]
 
 const PaymentMethod = [
-    { id: 1, name: "Apple Pay", image: "/images/cash.png" },
-    { id: 2, name: "Google Pay", image: "/images/card.png" },
-    { id: 3, name: "24 Private", image: "/images/bank.png" },
-    { id: 4, name: "Mastercard", image: "/images/bank.png" },
-    { id: 5, name: "Visa", image: "/images/bank.png" },
+    { id: 1, name: "Apple Pay", image: "/images/apple_pay.png" },
+    { id: 2, name: "Google Pay", image: "/images/Google_Pay.png" },
+    { id: 3, name: "24 Private", image: "/images/private_24.png" },
+    { id: 4, name: "Mastercard", image: "/images/Mastercard.png" },
+    { id: 5, name: "Visa", image: "/images/visa.png" },
 ]
 
 const colors = [
@@ -91,8 +91,8 @@ export default function IphonePink() {
 
                         <div className="flex gap-4">
                             {PaymentMethod.map((method) => (
-                                <span key={method.id} className="w-16 h-8 rounded-full bg-[#FFB800] flex items-center justify-center">
-                                    <img src={method.image} alt={method.name} className="w-full h-full object-contain" />
+                                <span key={method.id} className="w-18 h-10 rounded-full bg-[#FFB800] flex items-center justify-center">
+                                    <img src={method.image} alt={method.name} className="w-12 h-12 object-contain" />
                                 </span>
                             ))}
                         </div>

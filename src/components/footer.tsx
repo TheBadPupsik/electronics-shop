@@ -10,7 +10,7 @@ export default function Footer() {
                     <p>Доступно для завантаження на платформах: Android, iOS</p>
                 </div>
 
-                <img src='/images/QR_code_for_mobile_English_Wikipedia.svg' alt='qr_code' className="w-55 h-55 bg-white" />
+                <img src='/images/QR_code_for_mobile_English_Wikipedia.svg' alt='qr_code' className="w-50 h-50 bg-white" />
 
             </div>
 

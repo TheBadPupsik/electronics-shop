@@ -18,8 +18,41 @@ export default function CategoriesGrid() {
 
     return (
         <section className="max-w-[1440px] w-full mx-auto py-6">
-            <div className="grid gap-4 auto-rows-[130px]"
-                style={{ gridTemplateColumns: 'repeat(6, 1fr)' }}>
+
+            {/* Мобильная версия: горизонтальный скролл круглых иконок */}
+            <div className="flex sm:hidden gap-5 overflow-x-auto px-4 pb-1 -mx-4">
+                <Link href="/favorites" className="flex flex-col items-center gap-2 shrink-0 w-16">
+                    <div className="w-14 h-14 rounded-full bg-[#FFB800] flex items-center justify-center shadow-sm">
+                        <img src="/icons/material-symbols_crown.svg" alt="Фаворити" className="w-6 h-6" />
+                    </div>
+                    <span className="text-[11px] font-medium text-center text-black leading-tight">Фаворити</span>
+                </Link>
+
+                {visibleCategories.map((category) => (
+                    <Link href={category.href} key={category.id} className="flex flex-col items-center gap-2 shrink-0 w-16">
+                        <div className="relative w-14 h-14 rounded-full bg-white shadow-sm overflow-hidden">
+                            {category.image && (
+                                <Image
+                                    src={category.image}
+                                    alt={category.name}
+                                    fill
+                                    sizes="56px"
+                                    className="object-cover"
+                                />
+                            )}
+                        </div>
+                        <span className="text-[11px] font-medium text-center text-black leading-tight line-clamp-1">
+                            {category.name}
+                        </span>
+                    </Link>
+                ))}
+            </div>
+
+            {/* Планшет / десктоп: bento-грид */}
+            <div
+                className="hidden sm:grid gap-4 auto-rows-[130px]"
+                style={{ gridTemplateColumns: 'repeat(6, 1fr)' }}
+            >
                 {visibleCategories.map((category) => {
                     const gridClass = gridStylesMap[category.id] || 'col-span-1 row-span-1'
                     return (

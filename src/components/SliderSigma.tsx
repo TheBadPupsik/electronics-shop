@@ -37,9 +37,9 @@ export default function BannerSlider() {
     }, [emblaApi, onSelect])
 
     return (
-        <div className="flex flex-col items-center gap-6 w-full mt-10">
+        <div className="flex flex-col items-center gap-4 sm:gap-6 w-full mt-6 sm:mt-10">
 
-            <div className="overflow-hidden cursor-grab active:cursor-grabbing w-full px-4" ref={emblaRef}>
+            <div className="overflow-hidden cursor-grab active:cursor-grabbing w-full px-3 sm:px-4" ref={emblaRef}>
                 <div className="flex">
                     {banners.map((banner, index) => {
                         const isActive = index === current;
@@ -47,11 +47,11 @@ export default function BannerSlider() {
                         return (
                             <div
                                 key={`${banner.id}-${index}`}
-                                className="flex-shrink-0 w-[440px] px-3 transition-all duration-500 ease-out"
+                                className="flex-shrink-0 w-[78%] sm:w-[440px] px-2 sm:px-3 transition-all duration-500 ease-out"
                             >
                                 <Link
                                     href={banner.href}
-                                    className={`relative h-[500px] w-full rounded-3xl overflow-hidden transition-all duration-500 ease-out shadow-sm block
+                                    className={`relative h-[260px] sm:h-[500px] w-full rounded-3xl overflow-hidden transition-all duration-500 ease-out shadow-sm block
                                         ${isActive
                                             ? 'scale-100 opacity-100 shadow-md'
                                             : 'scale-92 opacity-60 pointer-events-none'
@@ -61,7 +61,7 @@ export default function BannerSlider() {
                                         src={banner.bg}
                                         alt="Promo Banner"
                                         fill
-                                        sizes="440px"
+                                        sizes="(max-width: 640px) 78vw, 440px"
                                         className="object-cover pointer-events-none select-none"
                                         priority={index === 0}
                                     />
@@ -73,7 +73,7 @@ export default function BannerSlider() {
             </div>
 
             {/* Точки навигации */}
-            <div className="flex gap-2.5 items-center mt-2">
+            <div className="flex gap-2 sm:gap-2.5 items-center mt-1 sm:mt-2">
                 {banners.map((_, index) => {
                     const isActive = index === current;
 
@@ -83,7 +83,7 @@ export default function BannerSlider() {
                             onClick={() => emblaApi?.scrollTo(index)}
                             className={`h-2 rounded-full transition-all duration-300 ease-in-out cursor-pointer
                                 ${isActive
-                                    ? 'bg-black w-7'
+                                    ? 'bg-black w-6 sm:w-7'
                                     : 'bg-neutral-300 w-2 hover:bg-neutral-400'
                                 }`}
                         />
